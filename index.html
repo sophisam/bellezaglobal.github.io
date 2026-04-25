@@ -2,7 +2,7 @@
 <html lang="es">
 <head>
 <meta charset="UTF-8">
-<title>Belleza Global</title>
+<title>Sophisam</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
@@ -15,9 +15,26 @@ body{
 
 header{
   background:#f2dcdb;
+  padding:15px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  font-weight:bold;
+  font-size:20px;
+}
+
+nav a{
+  margin:0 10px;
+  text-decoration:none;
   color:#333;
-  padding:20px;
-  text-align:center;
+  font-weight:bold;
+}
+
+nav a:hover{
+  color:#ff4da6;
 }
 
 .hero{
@@ -38,7 +55,7 @@ header{
 
 .section{
   text-align:center;
-  padding:30px;
+  padding:40px;
 }
 
 .card{
@@ -66,41 +83,44 @@ header{
 <body>
 
 <header>
-  <h2>Belleza Global</h2>
-  <p>Tu rutina de belleza en casa</p>
+  <div class="logo">Sophisam</div>
+  <nav>
+    <a href="#sobre">Sobre Sophisam</a>
+    <a href="#tips">Tips</a>
+    <a href="#productos">Productos</a>
+  </nav>
 </header>
 
 <div class="hero">
   <h1>Piel limpia y radiante desde casa</h1>
-  <p>El dispositivo que mejora tu piel en pocos días</p>
-
-  <img src="https://via.placeholder.com/250" width="250" alt="Producto">
-
-  <div class="price">$59.900 COP</div>
-
-  <a class="btn" href="https://wa.me/573001234567">Comprar ahora</a>
+  <p>Descubre los mejores productos de belleza</p>
 </div>
 
-<div class="section">
-  <h2>Beneficios</h2>
-
-  <div class="card">✔ Limpieza profunda</div>
-  <div class="card">✔ Reduce puntos negros</div>
-  <div class="card">✔ Mejora la piel</div>
+<div id="sobre" class="section">
+  <h2>Sobre Sophisam</h2>
+  <p>Somos una marca enfocada en mejorar tu rutina de belleza con productos efectivos y accesibles.</p>
 </div>
 
-<div class="section">
-  <h2>Resultados</h2>
-  <p>⭐⭐⭐⭐⭐ Clientes felices</p>
+<div id="tips" class="section">
+  <h2>Tips de belleza</h2>
+  <p>❌ No dormir con maquillaje</p>
+  <p>❌ No limpiar bien la piel</p>
+  <p>❌ No hidratar diariamente</p>
 </div>
 
-<div class="section">
-  <h2>Compra ahora</h2>
-  <a class="btn" href="https://wa.me/573001234567">Hablar por WhatsApp</a>
+<div id="productos" class="section">
+  <h2>Productos</h2>
+
+  <div class="card">
+    <p>Dispositivo limpieza facial</p>
+    <div class="price">$0000 COP</div>
+    <a class="btn" href="https://wa.me/573106400620">Comprar</a>
+  </div>
+
 </div>
 
 <div class="footer">
-  <p>© 2026 Belleza Global</p>
+  <p>© 2026 Sophisam</p>
 </div>
 
 </body>
