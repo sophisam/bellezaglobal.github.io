@@ -8,42 +8,89 @@
 <style>
 body{
   margin:0;
-  font-family:Arial;
+  font-family:Arial, sans-serif;
   background:#fff;
 }
 
 /* HEADER */
 header{
-  background:#f2dcdb;
-  padding:15px;
+  background:#fff;
+  padding:15px 40px;
   display:flex;
   justify-content:space-between;
+  align-items:center;
+  border-bottom:1px solid #eee;
+}
+
+.logo{
+  font-size:22px;
+  font-weight:bold;
 }
 
 nav a{
-  margin:0 10px;
+  margin:0 15px;
   text-decoration:none;
   color:#333;
 }
 
-/* PRODUCTOS */
+nav a:hover{
+  color:#ff4da6;
+}
+
+/* HERO */
+.hero{
+  background:#f2dcdb;
+  padding:60px 20px;
+  text-align:center;
+}
+
+.hero h1{
+  font-size:32px;
+}
+
+/* FILTROS (simulación) */
+.filters{
+  padding:20px 40px;
+  border-bottom:1px solid #eee;
+}
+
+.filters span{
+  margin-right:15px;
+  cursor:pointer;
+  font-weight:bold;
+}
+
+/* GRID PRODUCTOS */
 .products{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-  gap:20px;
-  padding:20px;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:25px;
+  padding:40px;
 }
 
 .card{
-  border:1px solid #eee;
-  padding:15px;
   text-align:center;
+}
+
+.card img{
+  width:100%;
+  height:250px;
+  object-fit:cover;
+}
+
+.card p{
+  margin:10px 0;
+}
+
+.price{
+  color:#ff4da6;
+  font-weight:bold;
 }
 
 .btn{
   background:#ff4da6;
   color:#fff;
-  padding:10px;
+  padding:10px 15px;
   border:none;
   cursor:pointer;
 }
@@ -67,25 +114,40 @@ nav a{
 <body>
 
 <header>
-  <div>Sophisam</div>
+  <div class="logo">Sophisam</div>
   <nav>
-    <a href="#">Inicio</a>
+    <a href="#">Sobre</a>
+    <a href="#">Tips</a>
     <a href="#">Productos</a>
   </nav>
 </header>
 
+<div class="hero">
+  <h1>Cuidado del cabello</h1>
+  <p>Descubre los mejores productos</p>
+</div>
+
+<div class="filters">
+  <span>Todos</span>
+  <span>Tratamiento</span>
+  <span>Hidratación</span>
+  <span>Reparación</span>
+</div>
+
 <div class="products">
 
   <div class="card">
-    <p>Limpiador facial</p>
-    <p>$59.900</p>
-    <button class="btn" onclick="addToCart('Limpiador facial',59900)">Agregar</button>
+    <img src="https://via.placeholder.com/300">
+    <p>Shampoo hidratante</p>
+    <div class="price">$39.900</div>
+    <button class="btn" onclick="addToCart('Shampoo',39900)">Agregar</button>
   </div>
 
   <div class="card">
-    <p>Crema hidratante</p>
-    <p>$49.900</p>
-    <button class="btn" onclick="addToCart('Crema hidratante',49900)">Agregar</button>
+    <img src="https://via.placeholder.com/300">
+    <p>Acondicionador</p>
+    <div class="price">$34.900</div>
+    <button class="btn" onclick="addToCart('Acondicionador',34900)">Agregar</button>
   </div>
 
 </div>
@@ -122,7 +184,7 @@ function renderCart(){
   });
 
   document.getElementById("buyBtn").href =
-    "https://wa.me/573106400620?text=" + message;
+    "https://wa.me/573001234567?text=" + message;
 }
 </script>
 
